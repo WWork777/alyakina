@@ -1,0 +1,541 @@
+@import '/public/const.scss';
+
+@keyframes fon {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes slogan1 {
+    0%{
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes podslogan1 {
+    0%{
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    30%{
+        opacity: 0;
+        transform: translateX(-25%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slogan2 {
+    0%{
+        opacity: 0;
+        transform: translateX(10%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes podslogan2 {
+    0%{
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    30%{
+        opacity: 0;
+        transform: translateX(25%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes ugol1 {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes ugol2 {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes button {
+    0%{
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes backgroundMove {
+    0% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+.hero-video{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center bottom;
+    bottom: 0;
+    z-index: -10;
+    animation: backgroundMove .5s ease;
+    -webkit-animation: backgroundMove .5s ease;
+}
+.hero{
+    display: flex;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    -webkit-box-shadow: 0px -95vh 100vh -5vh rgba(8, 14, 19, 0.55) inset;
+    -moz-box-shadow: 0px -95vh 100vh -5vh rgba(8, 14, 19, 0.55) inset;
+    box-shadow: 0px -95vh 100vh -5vh rgba(3, 7, 8, 0.55) inset;
+    overflow: hidden;
+    //animation: fon 0.45s ease;
+    .hero-content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-between;
+        gap: 10%;
+        .linkhero{
+            font-family: inherit;
+            text-transform: uppercase;
+            font-size: 20px;
+            align-self: flex-end;
+            margin-right: 10%;
+            background: hsla(32, 41%, 87%, 0.3);
+            backdrop-filter: blur(5px);
+            border: 1px solid $beige;
+            border-radius: 30px;
+            padding: 15px 40px;
+            cursor: pointer;
+            transition: .3s ease;
+            margin-bottom: 15vh;
+            animation: button 1s ease;
+            color: white;
+        }
+        .linkhero:hover{
+            background-color: $olive-light2-blur2;
+            border: 1px solid $olive-light2;
+        }
+    }
+    .slogan{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        //align-self: center;
+        margin-top: 32vh;
+        margin-left: 10%;
+        max-width: 66%;
+        min-width: 1232px;
+        color: $beige;
+        gap: 30px;
+        .slogan-top{
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            p{
+                font-size: 128px;
+                font-weight: 900;
+                text-transform: uppercase;
+                line-height: 80%;
+                animation: slogan1 1s ease;
+            }
+            h1{
+                font-family: 'MontserratAlternates';
+                font-weight: 500;
+                font-size: 26px;
+                animation: podslogan1 2s ease;
+            }
+        }
+        .slogan-bottom{
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 30px;
+            align-items: flex-start;
+            p{
+                font-size: 128px;
+                font-weight: 900;
+                text-transform: uppercase;
+                line-height: 80%;
+                animation: slogan2 1s ease;
+            }
+            span{
+                font-family: 'MontserratAlternates';
+                font-weight: 500;
+                font-size: 26px;
+                margin-left: 10px;
+                animation: podslogan2 2s ease;
+            }
+        }
+    }
+    .slogan::after{
+        content: "";
+        display: block;
+        height: 52%;
+        width: 11%;
+        position: absolute;
+        border-left: 1px solid rgba(255, 255, 255, 0.8);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+        bottom: -30px;
+        left: -30px;
+        transform-origin: bottom left;
+        animation: ugol1 2s ease-in-out;
+        transition: .3s cubic-bezier(0,0,.5,1);
+        -webkit-transition: .3s cubic-bezier(0,0,.5,1);
+        -moz-transition: .3s cubic-bezier(0,0,.5,1);
+        -ms-transition: .3s cubic-bezier(0,0,.5,1);
+        -o-transition: .3s cubic-bezier(0,0,.5,1);
+}
+    .slogan::before{
+        content: "";
+        display: block;
+        height: 52%;
+        width: 11%;
+        position: absolute;
+        border-right: 1px solid rgba(255, 255, 255, 0.8);
+        border-top: 1px solid rgba(255, 255, 255, 0.8);
+        top: -30px;
+        right: -30px;
+        transform-origin: top right;
+        animation: ugol2 2s ease-in-out;
+        transition: .3s cubic-bezier(0,0,.5,1);
+        -webkit-transition: .3s cubic-bezier(0,0,.5,1);
+        -moz-transition: .3s cubic-bezier(0,0,.5,1);
+        -ms-transition: .3s cubic-bezier(0,0,.5,1);
+        -o-transition: .3s cubic-bezier(0,0,.5,1);
+}
+    .slogan:hover::after{
+        transform: translate(-15%, 10%);
+        -webkit-transform: translate(-15%, 10%);
+        -moz-transform: translate(-15%, 10%);
+        -ms-transform: translate(-15%, 10%);
+        -o-transform: translate(-15%, 10%);
+        border-left: 1px solid rgba(255, 255, 255, 0.8);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    .slogan:hover::before{
+        transform: translate(15%, -10%);
+        -webkit-transform: translate(15%, -10%);
+        -moz-transform: translate(15%, -10%);
+        -ms-transform: translate(15%, -10%);
+        -o-transform: translate(15%, -10%);
+        border-right: 1px solid rgba(255, 255, 255, 0.8);
+        border-top: 1px solid rgba(255, 255, 255, 0.8);
+    }
+}
+.hero::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #747474;
+    z-index: -11;
+    bottom: 0;
+}
+@media(max-width:1600px){
+    .hero{
+        .slogan{
+            margin-top: 34vh;
+            margin-left: 5%;
+            max-width: 85%;
+            min-width: 0;
+            .slogan-top{
+                p{
+                    font-size: 100px;
+                    line-height: 80%;
+                    margin-bottom: 0;
+                }
+                h1{
+                    font-family: 'MontserratAlternates';
+                    font-weight: 500;
+                    font-size: 22px;
+                    animation: podslogan1 2s ease;
+                }
+            }
+            .slogan-bottom{
+                gap: 30px;
+                p{
+                    font-size: 100px;
+                    font-weight: 900;
+                    line-height: 80%;
+                    margin-bottom: 0;
+                }
+                span{
+                    font-size: 22px;
+                }
+            }
+        }
+        .hero-content{
+            .linkhero{
+                font-size: 18px;
+                align-self: flex-end;
+                margin-right: 5%;
+                border-radius: 30px;
+                padding: 15px 40px;
+                cursor: pointer;
+                transition: .3s ease;
+                margin-bottom: 15vh;
+                animation: button 1s ease;
+                color: white;
+            }
+        }
+    }
+}
+@media(max-width:1175px){
+    .hero{
+        .slogan{
+            margin-top: 34vh;
+            margin-left: 5%;
+            max-width: 75%;
+            min-width: 0;
+            .slogan-top{
+                p{
+                    font-size: 80px;
+                    line-height: 75%;
+                    margin-bottom: 0;
+                }
+                h1{
+                    font-size: 18px;
+                }
+            }
+            .slogan-bottom{
+                gap: 30px;
+                p{
+                    font-size: 80px;
+                    font-weight: 900;
+                    line-height: 75%;
+                    margin-bottom: 0;
+                }
+                span{
+                    font-size: 18px;
+                }
+            }
+        }
+        .hero-content{
+            .linkhero{
+                font-size: 18px;
+                align-self: flex-end;
+                margin-right: 5%;
+                border-radius: 30px;
+                padding: 15px 40px;
+                cursor: pointer;
+                transition: .3s ease;
+                margin-bottom: 15vh;
+                animation: button 1s ease;
+                color: white;
+            }
+        }
+    }
+}
+@media(max-width:1100px){
+    .hero{
+        .slogan{
+            margin-top: 34vh;
+            margin-left: 5%;
+            max-width: 75%;
+            min-width: 0;
+            .slogan-top{
+                p{
+                    font-size: 74px;
+                    line-height: 75%;
+                    margin-bottom: 0;
+                }
+                h1{
+                    font-size: 16px;
+                }
+            }
+            .slogan-bottom{
+                gap: 30px;
+                p{
+                    font-size: 74px;
+                    font-weight: 900;
+                    line-height: 75%;
+                    margin-bottom: 0;
+                }
+                span{
+                    font-size: 16px;
+                }
+            }
+        }
+        .hero-content{
+            .linkhero{
+                font-size: 18px;
+                align-self: flex-end;
+                margin-right: 5%;
+                border-radius: 30px;
+                padding: 15px 40px;
+                cursor: pointer;
+                transition: .3s ease;
+                margin-bottom: 15vh;
+                animation: button 1s ease;
+                color: white;
+            }
+        }
+    }
+}
+@media(max-width:995px){
+    .hero{
+        .slogan{
+            margin-top: 34vh;
+            margin-left: 5%;
+            max-width: 90%;
+            min-width: 0;
+            .slogan-top{
+                p{
+                    font-size: 74px;
+                    line-height: 75%;
+                    margin-bottom: 0;
+                }
+                h1{
+                    font-size: 16px;
+                }
+            }
+            .slogan-bottom{
+                gap: 30px;
+                p{
+                    font-size: 74px;
+                    font-weight: 900;
+                    line-height: 75%;
+                    margin-bottom: 0;
+                }
+                span{
+                    font-size: 16px;
+                }
+            }
+        }
+        .hero-content{
+            .linkhero{
+                font-size: 18px;
+                align-self: flex-end;
+                margin-right: 5%;
+                border-radius: 30px;
+                padding: 15px 40px;
+                cursor: pointer;
+                transition: .3s ease;
+                margin-bottom: 15vh;
+                animation: button 1s ease;
+                color: white;
+            }
+        }
+    }
+}
+@media(max-width:992px){
+
+}
+@media(max-width:692px){
+    .hero{
+        height: 100vh;
+        .slogan{
+            margin-top: 28vh;
+            margin-left: 5%;
+            max-width: 90%;
+            min-width: 0;
+            gap: 10px;
+            .slogan-top{
+                flex-direction: column-reverse;
+                gap: 5px;
+                p{
+                    font-size: 36px;
+                    line-height: 75%;
+                    margin-bottom: 0;
+                }
+                h1{
+                    font-size: 11px;
+                    display: none;
+                }
+            }
+            .slogan-bottom{
+                gap: 10px;
+                flex-direction: column-reverse;
+                align-items: end;
+                p{
+                    font-size: 36px;
+                    font-weight: 900;
+                    line-height: 75%;
+                    margin-bottom: 0;
+                }
+                span{
+                    font-size: 11px;
+                    margin-left: 0;
+                    align-self: center;
+                }
+            }
+        }
+        .hero-content{
+            .linkhero{
+                font-size: 16px;
+                align-self: flex-end;
+                margin-right: 0;
+                align-self: center;
+                backdrop-filter: blur(5px);
+                border-radius: 30px;
+                padding: 10px 30px;
+                cursor: pointer;
+                transition: .3s ease;
+                margin-bottom: 40vh;
+                //width: 80%;
+                animation: button 1s ease;
+                color: white;
+            }
+        }
+        .slogan::after{
+            content: "";
+            display: block;
+            height: 72%;
+            width: 30%;
+            position: absolute;
+            bottom: -20px;
+            left: -10px;
+            transform-origin: bottom left;
+            animation: ugol1 2s ease-in-out;
+        }
+        .slogan::before{
+            content: "";
+            display: block;
+            height: 72%;
+            width: 30%;
+            position: absolute;
+            top: -20px;
+            right: -10px;
+            transform-origin: top right;
+            animation: ugol2 2s ease-in-out;
+        }
+    }
+}
