@@ -6,7 +6,7 @@ body {
 
 body {
   color: black;
-  background: #EEEEEE;
+  background: #eeeeee;
   //letter-spacing: .5px;
   font-family: var(--font-montserrat) !important;
   font-weight: 400;
@@ -21,8 +21,23 @@ body {
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+// Переопределение стилей Bootstrap для ссылок
+a:not([class*='btn']):not([class*='nav-link']):not([class*='dropdown']):not(
+    [class*='link-more']
+  ):not([class*='linkhero']) {
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,7 +46,7 @@ a {
   }
 }
 
-.link-more{
+.link-more {
   display: flex;
   position: relative;
   font-family: inherit;
@@ -42,37 +57,37 @@ a {
   border-radius: 30px;
   padding: 10px 40px;
   border: 1px solid black;
-  transition: .3s;
+  transition: 0.3s;
   overflow: hidden;
   margin-right: 8%;
-  span{
+  span {
     z-index: 1;
   }
-  svg{
-    transition: transform .3s ease;
+  svg {
+    transition: transform 0.3s ease;
   }
 }
-.link-more::before{
-  content: "";
+.link-more::before {
+  content: '';
   display: block;
   position: absolute;
   width: 0;
   height: 100%;
-  transition: .3s ease;
+  transition: 0.3s ease;
   border-radius: 30px;
   left: 0;
   background-color: black;
   z-index: 0;
 }
-.link-more:hover{
+.link-more:hover {
   color: white;
   //border: 1px solid #EEEEEE;
-  svg{
+  svg {
     transform: scaleX(1.2);
   }
 }
-.link-more:hover::before{
-  content: "";
+.link-more:hover::before {
+  content: '';
   display: block;
   z-index: 0;
   position: absolute;
@@ -80,13 +95,13 @@ a {
   height: 100%;
   background-color: black;
 }
-@media(max-width:992px){
-  .link-more{
+@media (max-width: 992px) {
+  .link-more {
     display: flex;
     padding: 6px 25px;
     font-size: 14px;
-    svg{
-      transition: transform .3s ease;
+    svg {
+      transition: transform 0.3s ease;
       height: 26px;
     }
   }
