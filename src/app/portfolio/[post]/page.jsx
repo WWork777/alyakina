@@ -7,7 +7,7 @@ import Image from "next/image";
 import Plan from "../../../../components/Portfolio/Plan";
 
 export async function generateMetadata({ params }) {
-  const { post } = params;
+  const { post } = await params;
 
   const res = await fetch(`https://alyakina.ru/Portfolio/Portfolio.json`);
   const data = await res.json();
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }) {
 }
 
 const Portfolio = async ({ params }) => {
-  const { post } = params;
+  const { post } = await params;
 
   const res = await fetch(`https://alyakina.ru/Portfolio/Portfolio.json`);
   const data = await res.json();
