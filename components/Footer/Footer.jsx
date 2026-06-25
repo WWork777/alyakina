@@ -25,11 +25,10 @@ export default function Footer(){
                         <span>Sofiya Alyakina</span>
                         <span>architect</span>
                     </div>
-                    <div className='footer-docs'>
+                    <div className='footer-docs' id='footerDocs'>
                         <a href='/politika-konfidencialnosti.pdf' target='_blank' rel='noopener noreferrer'>Политика конфиденциальности</a>
                         <a href='/politika-obrabotki-pd.pdf' target='_blank' rel='noopener noreferrer'>Политика обработки персональных данных</a>
                         <a href='/polzovatelskoe-soglashenie.pdf' target='_blank' rel='noopener noreferrer'>Пользовательское соглашение</a>
-                        <a href='/informaciya.pdf' target='_blank' rel='noopener noreferrer'>Информация</a>
                     </div>
                     <div className='footer-contacts'>
                         <a href='tel:+7 (978) 286-87-17'>+7 (978) 286-87-17</a>

@@ -63,6 +63,13 @@ footer {
         color: $olive-light2;
       }
     }
+    #footerDocs a {
+      color: #ffffff !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    }
+    #footerDocs a:hover {
+      color: $olive-light2 !important;
+    }
     .footer-docs {
       position: absolute;
       bottom: 0;
