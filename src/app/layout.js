@@ -12,6 +12,7 @@ import '../../components/Home/Form/Form.scss';
 import '../../components/ModalForm/ModalForm.scss';
 import YandexMetrika from '../../components/YandexMetrika/YandexMEtrika';
 import Form from '../../components/Home/Form/Form';
+import CookieConsent from '../../components/CookieConsent/CookieConsent';
 
 export const metadata = {
   icons: {
@@ -123,6 +124,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <ModalForm />
         <Confidentiality />
+        <CookieConsent />
         <YandexMetrika />
       </body>
     </html>

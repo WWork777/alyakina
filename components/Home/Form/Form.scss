@@ -81,12 +81,25 @@ form {
       border-radius: 0 !important;
     }
     .conf {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
       font-size: 14px;
-      text-align: center;
+      text-align: left;
       font-weight: 300;
       color: rgb(221, 221, 221);
+      cursor: pointer;
+      input[type='checkbox'] {
+        flex-shrink: 0;
+        margin-top: 3px;
+        width: 16px;
+        height: 16px;
+        accent-color: $olive-light2;
+        cursor: pointer;
+      }
       a {
         color: white;
+        text-decoration: underline;
       }
     }
     .link-more {

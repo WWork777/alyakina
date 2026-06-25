@@ -95,7 +95,10 @@ export default function ModalForm(){
                                                 <span className="bar"></span>
                                                 <label>Телефон</label>
                                             </div>
-                                <span className="conf">Нажимая на кнопку “отправить заявку”, я соглашаюсь с условиями <a href="#"  type="button" data-bs-toggle="modal" data-bs-target="#сonfidentiality">политики конфиденциальности</a></span>
+                                <label className="conf">
+                                    <input type="checkbox" name="consent" required />
+                                    <span>Я соглашаюсь с <a href="/politika-obrabotki-pd.pdf" target="_blank" rel="noopener noreferrer">политикой обработки персональных данных</a> и даю согласие на обработку моих персональных данных</span>
+                                </label>
                                 </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>

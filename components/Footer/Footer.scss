@@ -63,6 +63,29 @@ footer {
         color: $olive-light2;
       }
     }
+    .footer-docs {
+      position: absolute;
+      bottom: 2%;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 24px;
+      padding: 0 5%;
+      a {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: 0.2s ease;
+      }
+      a:hover {
+        color: $olive-light2;
+      }
+    }
     .footer-logo {
       position: absolute;
       display: flex;
