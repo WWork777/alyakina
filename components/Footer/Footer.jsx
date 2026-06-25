@@ -14,7 +14,7 @@ export default function Footer(){
             <footer>
                 <Image src={`/Footer/footer.webp`} alt='Студия архитектуры и дизайна - подвал' width={2000} height={2000}/>
                 <div className='footer-fon'>
-                    <div className='footer-menu'>
+                    <div className='footer-menu' id='footerMenu'>
                         <Link href='/'>Главная</Link>
                         <Link href='/portfolio'>Проекты</Link>
                         <Link href='/services'>Услуги</Link>
